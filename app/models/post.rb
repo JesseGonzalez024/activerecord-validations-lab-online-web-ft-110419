@@ -3,5 +3,5 @@ class Post < ActiveRecord::Base
   validates :content, length: { minimum: 250 }
   validates :summary, length: {maximum: 250 }
   validates :category, acceptance: { accept: 'Fiction'}
-  
+  validates :category, acceptance: { accept: 'Non-Fiction'}
 end
