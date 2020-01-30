@@ -5,4 +5,5 @@ class Post < ActiveRecord::Base
   # validates :category, acceptance: { accept: 'Fiction'}
   # validates :category, acceptance: { accept: 'Non-Fiction'}
   validates :category, inclusion: { in: %w[Fiction Non-Fiction] }
+  validates_with PostValidator
 end
